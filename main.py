@@ -12,4 +12,10 @@ def greet(query: str) -> str:
 
 
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run(
+        transport="sse",
+        host="127.0.0.1",
+        port=4200,
+        log_level="debug",
+        path="/my-custom-sse-path",
+    )
